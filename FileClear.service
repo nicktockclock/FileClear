@@ -1,0 +1,12 @@
+[Unit]
+Description=File clearing service
+
+[Service]
+ExecStart=dotnet /usr/share/FileClear/FileClear.dll
+SyslogIdentifier=FileClear
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
